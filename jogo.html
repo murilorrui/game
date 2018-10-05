@@ -5,30 +5,36 @@
     <title>Who's that Dota hero?</title>
   </head>
   <body>
-    <div class="game">
+    <div class="application">
       <div class="header">
         <h1 class="title">Who's that Dota hero?</h1>
       </div>
-      <div class="card-question">
-        <img class="card-question__img" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/2/26/Phantom_Lancer_Guide_Header.png?version=98bcc70e02c2b964b0f0519fdd9d6528" alt="">
-      </div>
-      <div class="session-answer">
-        <div class="card-answer">
-          <img class="card-answer__img" src="https://c-5uwzmx78pmca09x24l9c3x781t2ex78ig1sx2ektwclnzwvbx2evmb.g00.gamepedia.com/g00/3_c-5lwbi0-x78b.oiumx78mlqi.kwu_/c-5UWZMXPMCA09x24pbbx78ax3ax2fx2fl9c3x781t2ex78ig1s.ktwclnzwvb.vmbx2flwbi0_oiumx78mlqix2f6x2f69x2fXpivbwu_Tivkmz_qkwv.x78vox3fdmzaqwvx3d51ijj99iji0k5mj5k4nlmn692imni93j_$/$/$/$/$?i10c.ua=1&i10c.dv=14" alt="">
-          <div class="card-answer__text-box">
-            <strong class="card-answer__text">Phantom Lancer</strong>
+      <div class="container">
+        <div class="layout">
+          <div class="session-question">
+            <div class="card-question">
+              <img class="card-question__img" src="https://api.opendota.com/apps/dota2/images/heroes/phantom_lancer_icon.png" alt="">
+            </div>
           </div>
-        </div>
-        <div class="card-answer">
-          <img class="card-answer__img" src="https://c-5uwzmx78pmca09x24l9c3x781t2ex78ig1sx2ektwclnzwvbx2evmb.g00.gamepedia.com/g00/3_c-5lwbi0-x78b.oiumx78mlqi.kwu_/c-5UWZMXPMCA09x24pbbx78ax3ax2fx2fl9c3x781t2ex78ig1s.ktwclnzwvb.vmbx2flwbi0_oiumx78mlqix2f6x2f69x2fXpivbwu_Tivkmz_qkwv.x78vox3fdmzaqwvx3d51ijj99iji0k5mj5k4nlmn692imni93j_$/$/$/$/$?i10c.ua=1&i10c.dv=14" alt="">
-          <div class="card-answer__text-box">
-            <strong class="card-answer__text">Phantom Lancer</strong>
-          </div>
-        </div>
-        <div class="card-answer">
-          <img class="card-answer__img" src="https://c-5uwzmx78pmca09x24l9c3x781t2ex78ig1sx2ektwclnzwvbx2evmb.g00.gamepedia.com/g00/3_c-5lwbi0-x78b.oiumx78mlqi.kwu_/c-5UWZMXPMCA09x24pbbx78ax3ax2fx2fl9c3x781t2ex78ig1s.ktwclnzwvb.vmbx2flwbi0_oiumx78mlqix2f6x2f69x2fXpivbwu_Tivkmz_qkwv.x78vox3fdmzaqwvx3d51ijj99iji0k5mj5k4nlmn692imni93j_$/$/$/$/$?i10c.ua=1&i10c.dv=14" alt="">
-          <div class="card-answer__text-box">
-            <strong class="card-answer__text">Phantom Lancer</strong>
+          <div class="session-answer">
+            <div class="card-answer">
+              <img class="card-answer__img" src="https://api.opendota.com/apps/dota2/images/heroes/phantom_lancer_full.png?" alt="">
+              <div class="card-answer__text-box">
+                <strong class="card-answer__text">Phantom Lancer</strong>
+              </div>
+            </div>
+            <div class="card-answer">
+              <img class="card-answer__img" src="https://api.opendota.com/apps/dota2/images/heroes/phantom_lancer_full.png?" alt="">
+              <div class="card-answer__text-box">
+                <strong class="card-answer__text">Phantom Lancer</strong>
+              </div>
+            </div>
+            <div class="card-answer">
+              <img class="card-answer__img" src="https://api.opendota.com/apps/dota2/images/heroes/phantom_lancer_full.png?" alt="">
+              <div class="card-answer__text-box">
+                <strong class="card-answer__text">Phantom Lancer</strong>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -37,6 +43,10 @@
 </html>
 
 <style media="screen">
+  * {
+    margin: 0;
+    padding: 0;
+  }
   html {
     font-family: sans-serif;
     overflow: auto;
@@ -48,40 +58,53 @@
   }
 
   .header {
-    padding: 0px;
-    margin: 0px;
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,0.5), 0 15px 20px 0 rgba(0,0,0,0.5);
+    position: relative;
+    transition: none;
     width: 100%;
     height: 100px;
-    background: transparent;
-    border: 2px solid rgba(#000000, 0.78);
-    border-radius: 2px;
-    box-shadow: 0 5px 20px 0 rgba(0,0,0,0.5), 0 15px 20px 0 rgba(0,0,0,0.5);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(to bottom, #0f2027, #203a43 30%, #0f2027);
   }
 
   .title {
     color: white;
   }
 
-  .game {
-    height: 100vh;
+  .application {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-flow: wrap;
+    flex: 1 1 auto;
+    flex-direction: column;
+    max-width: 100%;
+    min-height: 100vh;
+    position: relative;
     background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
   }
 
-  .card-question {
-    height: 400px;
-    width: 900px;
+  .container {
+    padding: 80px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    flex-flow: nowrap;
     justify-content: center;
+    text-align: center!important;
+  }
+
+  .layout {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+
+  .card-question {
+    margin: auto;
+    padding: 24px;
+    width: 40%;
     background: transparent;
     border: 2px solid rgba(#000000, 0.78);
     border-radius: 2px;
@@ -89,33 +112,42 @@
   }
 
   .card-question__img {
-    filter: blur(5px) grayscale(90%) brightness(1.85);
-    width: 50%;
+    filter: blur(7px) grayscale(100%) brightness(0.0);
+    width: 30%;
     height: 80%;
   }
 
+  .session-question {
+    flex: 12 1 100%;
+  }
   .session-answer {
+    flex: 12 1 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    flex-flow: wrap;
+    padding: 80px;
     align-items: center;
+    justify-content: center;
   }
 
   .card-answer {
+    flex-basis: 20.20%;
+    flex-grow: 0;
+    max-width: 20.20%;
+    box-sizing: border-box;
+    transition: all 0.25s;
     position: relative;
     margin: 0 25px;
     background: transparent;
     border: 1px solid rgba(0, 0, 0, 0.7);
     border-radius: 2px;
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.5);
-    width: 300px;
     display: flex;
     flex-direction: column;
   }
 
   .card-answer:hover {
     color: white;
-    padding: 3px;
     box-shadow: 0 5px 20px 0 rgba(0,0,0,0.6), 0 15px 30px 0 rgba(0,0,0,0.8);
   }
 
@@ -125,7 +157,6 @@
 
   .card-answer__img {
     width: 100%;
-    height: auto;
   }
 
   .card-answer__text {
@@ -140,7 +171,7 @@
     flex-flow: row;
     align-items: center;
     justify-content: center;
-    height: 90px;
+    height: 3em;
     background: rgba(0, 0, 0, 0.6);
     width: 100%;
     box-shadow: 0 0 2px 0 rgba(0,0,0,0.6);
