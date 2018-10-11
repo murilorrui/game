@@ -131,18 +131,7 @@
     border: 2px solid rgba(#000000, 0.78);
     border-radius: 2px;
     box-shadow: 0 5px 20px 0 rgba(0,0,0,0.5), 0 15px 20px 0 rgba(0,0,0,0.5);
-    animation: fadeInQuestion 2s;
-  }
-
-  @keyframes fadeInQuestion {
-    from {
-      opacity: 0;
-      width: 0%
-    }
-    to   {
-      opacity: 1;
-      width: 40%
-    }
+    animation: fade-in-scale 2s;
   }
 
   .card-question__img {
@@ -202,37 +191,26 @@
     display: flex;
     flex-direction: column;
     animation-timing-function: ease-in;
-    animation: fadein 2s;
+    animation: fade-in-scale 2s;
   }
 
-  @keyframes fadein {
+  @keyframes fade-in-scale {
     from {
       opacity: 0;
-      max-width: 0%
+      transform: scale(0);
     }
     to   {
       opacity: 1;
-      max-width: 20.20%
+      transform: scale(1);
     }
   }
 
   .card-answer__text {
     animation-timing-function: ease-in;
-    animation: textShow 3s;
+    animation: fade-in-scale 3s;
     color: #7295ab;
     font-size: 25px;
     text-shadow: 0 10px 20px rgba(0,0,0,0.6);
-  }
-
-  @keyframes textShow {
-    from {
-      font-size: 0px;
-      opacity: 0;
-    }
-    to   {
-      font-size: 25px;
-      opacity: 1;
-    }
   }
 
   .card-answer:hover {
