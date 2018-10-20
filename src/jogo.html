@@ -7,32 +7,35 @@
   <body>
     <div class="application">
       <div class="header">
-        <h1 class="header-title">Who's that Dota hero?</h1>
+        <h1 class="text--title">Who's that Dota hero?</h1>
       </div>
       <div class="container">
-        <div class="layout">
+        <div id="loading" class="layout text--title loading">
+          Loading...
+        </div>
+        <div id="game" class="layout game">
           <div class="session-question">
             <div class="card-question">
               <img id="icon" class="card-question__img" alt="">
             </div>
           </div>
           <div class="session-answer">
-            <div class="card-answer">
-              <img id="hero-answer-first" class="card-answer__img" alt="">
+            <div id="hero-answer-card-0" class="card-answer" onclick="teste(id)">
+              <img id="hero-answer-0" class="card-answer__img" alt="">
               <div class="card-answer__text-box">
-                <strong class="card-answer__text">Phantom Lancer</strong>
+                <strong id="hero-answer-name-0" class="card-answer__text"></strong>
               </div>
             </div>
-            <div class="card-answer">
-              <img id="hero-answer-xa" class="card-answer__img" alt="">
+            <div id="hero-answer-card-1" class="card-answer" onclick="teste(id)">
+              <img id="hero-answer-1" class="card-answer__img" alt="">
               <div class="card-answer__text-box">
-                <strong class="card-answer__text">Phantom Lancer</strong>
+                <strong id="hero-answer-name-1" class="card-answer__text"></strong>
               </div>
             </div>
-            <div class="card-answer">
-              <img id="hero-answer-alo" class="card-answer__img" alt="">
+            <div id="hero-answer-card-2" class="card-answer" onclick="teste(id)">
+              <img id="hero-answer-2" class="card-answer__img" alt="">
               <div class="card-answer__text-box">
-                <strong class="card-answer__text">Phantom Lancer</strong>
+                <strong id="hero-answer-name-2" class="card-answer__text"></strong>
               </div>
             </div>
           </div>
@@ -48,6 +51,12 @@
     margin: 0;
     padding: 0;
   }
+
+  .loading {
+    display: flex; 
+    justify-content: center;
+  }
+
   html {
     font-family: sans-serif;
     overflow: auto;
@@ -71,7 +80,7 @@
     background: linear-gradient(to bottom, #0f2027, #203a43 30%, #0f2027);
   }
 
-  .header-title {
+  .text--title {
     font-weight: 100;
     color: #d7efff;
     font-size: 50px;
@@ -116,8 +125,11 @@
     text-align: center;
   }
 
+  .game {
+    display: none;
+  }
+
   .layout {
-    display: flex;
     flex: 1 1 auto;
     flex-direction: row;
     flex-wrap: wrap;
