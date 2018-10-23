@@ -5,6 +5,16 @@
     <title>Who's that Dota hero?</title>
   </head>
   <body>
+    <div class="modal">
+      <div class="modal-content">
+        <div class="flex">
+          <img id="icon" class="modal-content__img" alt="">
+        </div>
+        <div class="flex">
+          <h1 class="text--title">VICTORY!</h1>
+        </div>
+      </div>
+    </div>
     <div class="application">
       <div class="header">
         <h1 class="text--title">Who's that Dota hero?</h1>
@@ -53,7 +63,7 @@
   }
 
   .loading {
-    display: flex; 
+    display: flex;
     justify-content: center;
   }
 
@@ -65,6 +75,38 @@
 
   body {
     margin: 0px;
+  }
+
+  .modal {
+    position: fixed; /* Stay in place */
+    z-index: 200; /* Sit on top */
+    left: 0;
+    top: 105;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+  }
+  .modal-content {
+    flex: 12 1 100%;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    padding: 80px;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 100vw; /* Could be more or less, depending on screen size */
+  }
+
+  .flex {
+    flex: 12 1 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
   }
 
   .header {

@@ -13,15 +13,19 @@ fetch(requestHeroes)
   .then((response) => {
     response.json().then((data) => {
       this.heros = [];
-      for (var x = 0; x < 3; x++) {
-        this.hero = data[Math.floor(Math.random() * data.length)];
-        this.heros.push(this.hero);
-      }
+      data.forEach(() => {
+        var hero = data[Math.floor(Math.random() * data.length)];
+        if (this.heros.indexOf(hero)) {
+          this.heros.push(hero);
+        }
+      });
       this.questionElement = document.getElementById('icon');
-
-      this.questionElement.src = api + this.heros[0].icon;
-      this.questionTeste = this.heros[0].id;
       
+      this.hero = this.heros[Math.floor(Math.random() * 3)]
+
+      this.questionElement.src = api + this.hero.icon;
+      this.questionTeste = this.hero.id;
+
       for (var x = 0; x < 3; x++) {
         this.answerBuild(x);
       }
