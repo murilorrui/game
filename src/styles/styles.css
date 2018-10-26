@@ -1,0 +1,6 @@
+@import './default/normalize.css';
+@import './game/cards.css';
+@import './layout/base.css';
+@import './layout/modal.css';
+@import './layout/session-game.css';
+@import './font/base.css';

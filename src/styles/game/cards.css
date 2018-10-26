@@ -1,0 +1,131 @@
+.card-question {
+  pointer-events: none;
+  margin: auto;
+  padding: 24px;
+  width: 40%;
+  background: transparent;
+  border: 2px solid rgba(#000000, 0.78);
+  border-radius: 2px;
+  box-shadow: 0 5px 20px 0 rgba(0,0,0,0.5), 0 15px 20px 0 rgba(0,0,0,0.5);
+  animation: fade-in-scale 2s;
+}
+
+.card-question__img {
+  filter: blur(7px) grayscale(100%) brightness(0.0);
+  width: 30%;
+  height: 80%;
+  animation: question-img 2s;
+}
+
+.card-answer {
+  flex-basis: 20.20%;
+  flex-grow: 0;
+  max-width: 20.20%;
+  box-sizing: border-box;
+  transition: all 0.25s;
+  position: relative;
+  margin: 0 25px;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  border-radius: 2px;
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  animation-timing-function: ease-in;
+  animation: fade-in-scale 2s;
+}
+
+.card-answer__text {
+  animation-timing-function: ease-in;
+  animation: fade-in-scale 3s;
+  color: #7295ab;
+  font-size: 25px;
+  text-shadow: 0 10px 20px rgba(0,0,0,0.6);
+}
+
+.card-answer:hover {
+  color: white;
+  box-shadow: 0 5px 20px 0 rgba(0,0,0,0.6), 0 15px 30px 0 rgba(0,0,0,0.8);
+}
+
+.card-answer:hover .card-answer__text {
+  color: white;
+}
+
+.card-answer__img {
+  width: 100%;
+}
+
+.card-answer__text-box {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  height: 3em;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.6);
+}
+
+.wrong-answer {
+  transform: scale(0.9);
+  pointer-events: none;
+}
+
+.wrong-answer > img {
+  filter: grayscale(100%);
+}
+
+@keyframes question-img {
+    0% {
+      filter: blur(50px) grayscale(100%) brightness(0.0);
+    }
+
+    50% {
+      filter: blur(30px) grayscale(100%) brightness(0.0);
+    }
+
+    70% {
+      filter: blur(15px) grayscale(100%) brightness(0.0);
+    }
+
+    90% {
+      filter: blur(10px) grayscale(100%) brightness(0.0);
+    }
+
+    100% {
+      filter: blur(7px) grayscale(100%) brightness(0.0);
+    }
+}
+
+@keyframes revert-question-img {
+    0% {
+      filter: blur(50px) grayscale(100%) brightness(0.0);
+    }
+    50% {
+      filter: blur(30px) grayscale(60%) brightness(0.0);
+    }
+
+    70% {
+      filter: blur(15px) grayscale(40%) brightness(0.0);
+    }
+
+    90% {
+      filter: blur(10px) grayscale(20%) brightness(0.0);
+    }
+
+    100% {
+      filter: unset;
+    }
+}
+
+@keyframes fade-in-scale {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to   {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

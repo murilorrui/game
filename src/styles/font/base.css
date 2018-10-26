@@ -1,0 +1,51 @@
+.text--title {
+  font-weight: 100;
+  color: #d7efff;
+  font-size: 50px;
+  text-shadow: 0 0px 15px rgba(215, 239, 255, 0.62), 0 0px 8px rgba(239, 239, 239, 0.5);
+  animation: neon 4s infinite;
+}
+
+.text--button {
+  font-weight: 100;
+  color: #d7efff;
+  text-shadow: 0 0px 15px rgba(215, 239, 255, 0.62), 0 0px 8px rgba(239, 239, 239, 0.5);
+  animation: neon 4s infinite;
+}
+
+.text--victory {
+  margin-top: 25px;
+  font-weight: 100;
+  color: #d7efff;
+  font-size: 70px;
+  text-shadow: 0 0px 15px rgba(215, 239, 255, 0.62), 0 0px 8px rgba(239, 239, 239, 0.5);
+  animation: neon 4s infinite;
+}
+
+@keyframes neon {
+  0% {
+    text-shadow: 0 0px 15px rgba(215, 239, 255, 0.62), 0 0px 8px rgba(239, 239, 239, 0.5);
+  }
+  25% {
+    text-shadow: 0 0px 20px rgba(215, 239, 255, 0.82), 0 0px 12px rgba(239, 239, 239, 0.7);
+  }
+  50% {
+    text-shadow: 0 0px 25px rgba(215, 239, 255, 1), 0 0px 14px rgba(239, 239, 239, 0.9);
+  }
+  75% {
+    text-shadow: 0 0px 20px rgba(215, 239, 255, 0.82), 0 0px 12px rgba(239, 239, 239, 0.7);
+  }
+  100% {
+    text-shadow: 0 0px 15px rgba(215, 239, 255, 0.62), 0 0px 8px rgba(239, 239, 239, 0.5);
+  }
+}
+
+.title {
+  font-size: 1.8em;
+  padding: 0.5em;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,40 @@
+#modal {
+  z-index: 0;
+}
+
+.modal-content {
+  z-index: 10;
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  width: 300px;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.modal-content__box {
+  box-sizing: border-box;
+  transition: all 0.25s;
+  position: relative;
+  margin: 0 25px;
+  box-shadow: 0px 0px 210px 10px rgba(255,255,255,0.4);
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.4) 0%,rgba(255,255,255,0) 148%);
+  height: 70%;
+  width: 70%;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-timing-function: ease-in;
+}
+
+.modal-content__img {
+  width: 140px;
+  height: 140px;
+}

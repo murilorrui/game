@@ -10,6 +10,9 @@ var api = 'https://api.opendota.com';
 const requestHeroes = new Request(api + '/api/heroStats/?api_key=b950156d-d368-4e3d-b770-f03327c94ccf', myInit);
 
 this.startGame();
+this.victory = document.getElementById('img-victory');
+this.overlay = document.getElementById('overlay');
+this.modal = document.getElementById('modal');
 
 function startGame() {
   fetch(requestHeroes)
@@ -60,24 +63,23 @@ function answerBuild(number) {
 
 function teste(id) {
   if (this.questionTeste == id) {
-    var cardQuestion = document.getElementsByClassName('card-question__img');
-    cardQuestion[0].style.animation = 'revert-question-img 2s';
-    cardQuestion[0].style.filter = 'unset';
-    this.restartGame();
+    this.victory.src = api + this.hero.icon;
+    this.overlay.style.zIndex = 9;
+    this.modal.style.zIndex = 10;
     return;
   }
   var card = document.getElementById(id);
   card.classList.add('wrong-answer');
 }
 
-function restartGame() {
-  setTimeout(() => {
-    var cards = document.getElementsByClassName('card-answer');
-    Array.prototype.map.call(cards, (card) => {
-      card.classList.remove('wrong-answer');
-    });
-    document.getElementById('loading').style.display = 'flex';
-    document.getElementById('game').style.display = 'none';
-    this.startGame();
-  }, 3000);
+function newGame() {
+  var cards = document.getElementsByClassName('card-answer');
+  Array.prototype.map.call(cards, (card) => {
+    card.classList.remove('wrong-answer');
+  });
+  this.overlay.style.zIndex = 0;
+  this.modal.style.zIndex = 0;
+  document.getElementById('loading').style.display = 'flex';
+  document.getElementById('game').style.display = 'none';
+  this.startGame();
 }
