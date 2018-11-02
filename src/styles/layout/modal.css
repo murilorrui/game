@@ -1,8 +1,4 @@
 #modal {
-  z-index: 0;
-}
-
-.modal-content {
   z-index: 10;
   position: absolute;
   left: 0; right: 0; top: 0; bottom: 0;
@@ -16,9 +12,10 @@
   align-items: center;
   justify-content: center;
   padding: 25px;
+  animation: victory 2s;
 }
 
-.modal-content__box {
+#modal-content__box {
   box-sizing: border-box;
   transition: all 0.25s;
   position: relative;
@@ -34,7 +31,20 @@
   animation-timing-function: ease-in;
 }
 
-.modal-content__img {
+#modal-content__img {
   width: 140px;
   height: 140px;
+  animation: victory 1.5s ease-in;
+}
+
+@keyframes victory {
+  from {
+    opacity: 0;
+    transform: scale(0);
+    filter: blur(7px) grayscale(100%) brightness(0.0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

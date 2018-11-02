@@ -1,3 +1,13 @@
+.card-default {
+  margin: auto;
+  padding: 24px;
+  width: 40%;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  box-shadow: 0 5px 20px 0 rgba(0,0,0,0.5), 0 15px 20px 0 rgba(0,0,0,0.5);
+}
+
 .card-question {
   pointer-events: none;
   margin: auto;
@@ -68,8 +78,10 @@
 }
 
 .wrong-answer {
+  animation: wrong 2s ease;
   transform: scale(0.9);
   pointer-events: none;
+  box-shadow: 0 0 0 0 rgba(0,0,0,0);
 }
 
 .wrong-answer > img {
@@ -127,5 +139,16 @@
   to   {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes wrong {
+  from {
+    transform: scale(1);
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,0.6), 0 15px 30px 0 rgba(0,0,0,0.8);
+  }
+  to {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(0,0,0,0);
   }
 }

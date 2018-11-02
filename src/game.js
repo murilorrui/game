@@ -9,12 +9,9 @@ var api = 'https://api.opendota.com';
 
 const requestHeroes = new Request(api + '/api/heroStats/?api_key=b950156d-d368-4e3d-b770-f03327c94ccf', myInit);
 
-this.startGame();
-this.victory = document.getElementById('img-victory');
-this.overlay = document.getElementById('overlay');
-this.modal = document.getElementById('modal');
+this.createGame();
 
-function startGame() {
+function createGame() {
   fetch(requestHeroes)
     .then((response) => {
       response.json().then((data) => {
@@ -63,9 +60,30 @@ function answerBuild(number) {
 
 function teste(id) {
   if (this.questionTeste == id) {
-    this.victory.src = api + this.hero.icon;
-    this.overlay.style.zIndex = 9;
-    this.modal.style.zIndex = 10;
+    var overlay = document.createElement('div');
+    var modal = document.createElement('div');
+    var modalContentBox = document.createElement('div');
+    var modalImg = document.createElement('img');
+    var msg = document.createElement('h1');
+    var button = document.createElement('button');
+
+    overlay.id = 'overlay';
+    modal.id = 'modal';
+    modalContentBox.id = 'modal-content__box';
+    modalImg.id = 'modal-content__img';
+    msg.id = 'text--victory';
+    msg.innerHTML = 'VICTORY!';
+    button.innerHTML = 'New Game';
+    button.addEventListener('click', newGame)
+
+    document.getElementById('body').appendChild(overlay);
+    document.getElementById('body').appendChild(modal);
+    document.getElementById('modal').appendChild(modalContentBox);
+    document.getElementById('modal').appendChild(msg);
+    document.getElementById('modal').appendChild(button);
+    document.getElementById('modal-content__box').appendChild(modalImg);
+    document.getElementById('modal-content__img').src = api + this.hero.icon;
+
     return;
   }
   var card = document.getElementById(id);
@@ -77,9 +95,10 @@ function newGame() {
   Array.prototype.map.call(cards, (card) => {
     card.classList.remove('wrong-answer');
   });
-  this.overlay.style.zIndex = 0;
-  this.modal.style.zIndex = 0;
+  document.getElementById('body').removeChild(overlay);
+  document.getElementById('body').removeChild(modal);
   document.getElementById('loading').style.display = 'flex';
   document.getElementById('game').style.display = 'none';
-  this.startGame();
+
+  createGame();
 }

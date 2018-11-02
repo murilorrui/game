@@ -6,7 +6,7 @@
   height: 100px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background: linear-gradient(to bottom, #0f2027, #203a43 30%, #0f2027);
 }
@@ -50,7 +50,7 @@
 }
 
 #overlay {
-  z-index: 0;
+  z-index: 9;
   position: absolute;
   left: 0; right: 0; top: 0; bottom: 0;
   background-color: rgba(0, 0, 0, 0.9);
@@ -58,15 +58,20 @@
 
 button {
   background-color: #444;
-  padding: 5px 20px;
-  box-shadow:  0 0px 15px rgba(0, 0, 0, 0.62), 0 0px 8px rgba(0, 0, 0, 0.5);
-  color: White;
-  padding: 10px;
+  padding: 10px 25px;
   font-size: 1.4em;
   animation: title 4s infinite;
+  color: White;
 }
 
 button:hover {
   background: #555;
-  box-shadow: 0 5px 20px 0 rgba(0,0,0,0.6), 0 15px 30px 0 rgba(0,0,0,0.8);
+}
+
+input {
+  padding: 15px;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 10px 0 rgba(0,0,0,0.6);
+  color: #d7efff;
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Who's that Dota hero?</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+  </head>
+  <body id="body">
+    <div class="application">
+      <div class="container">
+        <div class="layout">
+          <div class="card-default">
+            <h1 class="text--small">Who's that Dota hero?</h1>
+            <form id="form">
+              <div style="margin: 25px">
+                <span class="text--small" style="margin-right: 15px">Name:</span>
+                <input id="name" type="text" name="Player" value="">
+              </div>
+            </form>
+            <button form="form" type="button" onclick="startGame()">Start</button>
+          </div>
+          <div id="rank" class="card-default" style="margin-top: 25px">
+            <h1 class="text--small">Top 5</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../public/index.js" charset="utf-8"></script>
+  </body>
+</html>
