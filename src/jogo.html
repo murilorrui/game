@@ -8,9 +8,12 @@
   <body id="body">
     <div class="application">
       <div class="header">
-        <span class="text--small" style="margin-left: 35px">Noia</span>
+        <span id="player" class="text--small" style="margin-left: 35px"></span>
         <h1 class="text--title">Who's that Dota hero?</h1>
-        <span class="text--small" style="margin-right: 35px">Score: 999500</span>
+        <div style="margin-right: 35px">
+          <span class="text--small">SCORE: </span>
+          <span id="score" class="text--small"></span>
+        </div>
       </div>
       <div class="container">
         <div id="loading" class="layout text--title loading">
@@ -23,19 +26,19 @@
             </div>
           </div>
           <div class="session-answer">
-            <div class="card-answer" onclick="teste(id)">
+            <div class="card-answer" onclick="reply(id)">
               <img class="card-answer__img" alt="">
               <div class="card-answer__text-box">
                 <strong id="hero-answer-name-0" class="card-answer__text"></strong>
               </div>
             </div>
-            <div class="card-answer" onclick="teste(id)">
+            <div class="card-answer" onclick="reply(id)">
               <img class="card-answer__img" alt="">
               <div class="card-answer__text-box">
                 <strong id="hero-answer-name-1" class="card-answer__text"></strong>
               </div>
             </div>
-            <div class="card-answer" onclick="teste(id)">
+            <div class="card-answer" onclick="reply(id)">
               <img class="card-answer__img" alt="">
               <div class="card-answer__text-box">
                 <strong id="hero-answer-name-2" class="card-answer__text"></strong>
@@ -45,6 +48,6 @@
         </div>
       </div>
     </div>
-    <script src="../public/app.js" charset="utf-8"></script>
+    <script src="../public/game.js" charset="utf-8"></script>
   </body>
 </html>

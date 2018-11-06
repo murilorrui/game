@@ -22,6 +22,15 @@
   animation: neon 4s infinite;
 }
 
+#text--outplayed {
+  margin-top: 25px;
+  font-weight: 100;
+  color: #FF6261;
+  font-size: 70px;
+  text-shadow: 0 0px 15px rgba(215, 239, 255, 0.62), 0 0px 8px rgba(239, 239, 239, 0.5);
+  animation: neon 4s infinite;
+}
+
 @keyframes neon {
   0% {
     text-shadow: 0 0px 15px rgba(215, 239, 255, 0.62), 0 0px 8px rgba(239, 239, 239, 0.5);
